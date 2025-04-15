@@ -8,7 +8,7 @@
       "Madrid",
       "Roma"
     ],
-    "rispostaCorretta": "Parigi"
+    "rispostaCorretta": 1
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
       "Java",
       "C++"
     ],
-    "rispostaCorretta": "HTML"
+    "rispostaCorretta": 1
   },
   {
     "id": 3,
@@ -30,6 +30,17 @@
       "Napoli",
       "Torino"
     ],
-    "rispostaCorretta": "Roma"
+    "rispostaCorretta": 1
+  },
+  {
+    "id": 4,
+    "domanda": "Quale pianeta è conosciuto come il pianeta rosso?",
+    "opzioni": [
+      "Giove",
+      "Venere",
+      "Marte",
+      "Saturno"
+    ],
+    "rispostaCorretta": 2
   }
 ]

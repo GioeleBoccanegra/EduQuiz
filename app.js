@@ -21,13 +21,13 @@ app.get('/api/questions', function (req, res) {
 
 app.post('/api/questions', [
   body('domanda').isLength({ min: 1 }).isString().withMessage('la domanda deve essere una stringa con almeno n alettera'),
-  body('opzioni').isArray().withMessage('Problema formato opzioni, devi inserire un array di possibili opzioni').custom((value, { req }) => {
-    if (!value.includes(req.body.rispostaCorretta)) {
-      throw new Error('La risposta corretta deve essere una delle opzioni');
+  body('opzioni').isArray().withMessage('Problema formato opzioni, devi inserire un array di possibili opzioni'),
+  body('rispostaCorretta').isInt().withMessage('Probblema nella rispostaCorretta, deve essere un numero').custom((value, { req }) => {
+    if (req.body.rispostaCorretta > (req.body.opzioni.length + 1)) {
+      console.log('la risposta deve essere un numero che indichi la posizione della risposta tra le opzioni quindi non può essere maggiore del numero di opzioni')
     }
     return true;
-  }),
-  body('rispostaCorretta').isLength({ min: 1 }).withMessage('Probblema nella rispostaCorretta, deve avere almeno un carattere')
+  })
 ], (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
