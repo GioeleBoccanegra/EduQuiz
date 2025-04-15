@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>EduQuiz</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 
@@ -18,10 +18,10 @@
         <%=question.domanda%>
       </h3>
       <%question.opzioni.forEach(function (opzione, index) {%>
-        <label for="question_<%= question.id%>">
+        <label for="question_<%= question.id%>" class="opzione">
           <%=opzione%>
         </label>
-        <input type="radio" name="question_<%= question.id %>" value="<%=index+1%>" required>
+        <input type="radio" name="question_<%= question.id %>" value="<%=index+1%>" required class="opzione-input">
         <%})%>
           <%})%>
             <input type="submit" value="correggi">
