@@ -1,15 +1,17 @@
-const quizDomande = [
-  {
-    id: 1,
-    domanda: 'Qual è la capitale della Francia?',
-    opzioni: ['Parigi', 'Londra', 'Madrid', 'Roma'],
-    rispostaCorretta: 'Parigi'
-  },
-  {
-    id: 2,
-    domanda: 'Quale linguaggio si usa per creare pagine web?',
-    opzioni: ['HTML', 'Python', 'Java', 'C++'],
-    rispostaCorretta: 'HTML'
+const fs = require('fs')
+const path = require('path')
+
+const filePath = path.join(__dirname, 'quiz.json')
+function loadQuestions() {
+  if (fs.existsSync(filePath)) {
+    const data = fs.readFileSync(filePath)
+    return JSON.parse(data)
   }
-];
-module.exports = quizDomande;
+  return []
+}
+
+function saveQuestions(questions) {
+  fs.writeFileSync(filePath, JSON.stringify(questions, null, 2))
+}
+
+module.exports = { loadQuestions, saveQuestions }
