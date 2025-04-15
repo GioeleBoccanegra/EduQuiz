@@ -12,3 +12,4 @@ const quizDomande = [
     rispostaCorretta: 'HTML'
   }
 ];
+module.exports = quizDomande;
