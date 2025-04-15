@@ -1,80 +1,73 @@
-EduQuiz - Quiz interattivo con Node.js, Express e EJS
-EduQuiz è un'applicazione web che permette agli utenti di rispondere a domande a scelta multipla e ottenere un punteggio basato sulle risposte fornite. È costruita utilizzando Node.js, Express e il motore di template EJS.
 
-🛠️ Tecnologie utilizzate
-Node.js: ambiente di runtime per JavaScript lato server.
+# EduQuiz - Applicazione Web per il Quiz Educativo
 
-Express: framework web per Node.js.
+Un'applicazione web interattiva per la gestione di un quiz educativo. L'app utilizza **Node.js**, **Express** e **EJS** per creare un'esperienza utente dinamica e reattiva, con funzionalità di correzione automatica delle risposte e calcolo del punteggio.
 
-EJS: motore di template per la generazione dinamica di HTML.
+---
 
-CSS: per lo stile dell'interfaccia utente.
+## 📦 Requisiti
 
-🚀 Avvio rapido
-1. Clona il repository
-bash
-Copia codice
+- Node.js >= 14.x
+- npm (Node Package Manager)
+- Express.js
+- EJS (per la visualizzazione dinamica delle pagine)
+
+---
+
+## 🚀 Setup del progetto
+
+1. Clona il repository:
+
+```bash
 git clone https://github.com/tuo-utente/eduquiz.git
 cd eduquiz
-2. Installa le dipendenze
-bash
-Copia codice
+```
+
+2. Installa le dipendenze:
+
+```bash
 npm install
-3. Avvia il server
-bash
-Copia codice
+```
+
+3. Avvia il server di sviluppo:
+
+```bash
 npm start
-Il server sarà disponibile su http://localhost:5000.
+```
 
-📂 Struttura del progetto
-pgsql
-Copia codice
-eduquiz/
-├── assets/
-│   └── style.css
-├── views/
-│   ├── quiz.ejs
-│   └── answers.ejs
-├── server.js
-├── app.js
-├── quiz.json
-├── package.json
-└── README.md
-🧩 Funzionalità
-Visualizzazione delle domande: gli utenti possono rispondere a una serie di domande a scelta multipla.
+4. L'app sarà disponibile su `http://localhost:3000`
 
-Correzione automatica: dopo aver inviato le risposte, il sistema calcola il punteggio e visualizza il risultato.
+---
 
-Interfaccia utente responsive: l'app è progettata per essere utilizzata su dispositivi desktop e mobili.
+## 📡 Funzionalità principali
 
-📄 Descrizione dei file principali
-server.js: gestisce il caricamento e il salvataggio delle domande dal file JSON.
+### 📋 Gestione Domande
 
-app.js: definisce le rotte e la logica dell'applicazione.
+- Aggiungi, modifica ed elimina domande del quiz.
+- Ogni domanda può avere più risposte, con una o più corrette.
 
-quiz.json: contiene le domande e le risposte corrette.
+### ✅ Correzione Risposte
 
-views/quiz.ejs: template per la visualizzazione delle domande.
+- Il quiz corregge automaticamente le risposte degli utenti al termine.
+- Viene calcolato il punteggio in base alle risposte corrette.
 
-views/answers.ejs: template per la visualizzazione del punteggio finale.
+### 📊 Statistiche
 
-🧪 Test
-Per eseguire i test, puoi utilizzare un framework come Mocha o Jest. Assicurati di configurare correttamente i test per le rotte e le funzioni di correzione.
+- Visualizzazione del punteggio totale al termine del quiz.
+- Riepilogo delle risposte corrette e sbagliate.
 
-📌 Contribuire
-Se desideri contribuire a EduQuiz, segui questi passaggi:
+---
 
-Fork del repository.
+## 🧑‍💻 Tecnologie Utilizzate
 
-Crea un nuovo branch (git checkout -b feature-nome).
+- **Node.js**: Ambiente di runtime per JavaScript.
+- **Express**: Framework per la creazione di API RESTful.
+- **EJS**: Motore di templating per la generazione di pagine HTML dinamiche.
+- **express-validator**: Per la validazione dei dati inviati dagli utenti (ad esempio, le risposte del quiz).
 
-Apporta le modifiche desiderate.
+---
 
-Esegui i test per assicurarti che tutto funzioni correttamente.
+## 📜 Licenza
 
-Invia una pull request descrivendo le modifiche apportate.
+Questo progetto è rilasciato sotto la licenza MIT.
 
-📄 Licenza
-Questo progetto è concesso in licenza sotto la Licenza MIT - vedi il file LICENSE.md per i dettagli.
-
-Se hai bisogno di ulteriori personalizzazioni o aggiustamenti, non esitare a chiedere!
