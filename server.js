@@ -14,4 +14,18 @@ function saveQuestions(questions) {
   fs.writeFileSync(filePath, JSON.stringify(questions, null, 2))
 }
 
-module.exports = { loadQuestions, saveQuestions }
+function correggiQuiz(answers, quizDomande) {
+  let punteggio = 0
+  quizDomande.forEach((domanda) => {
+    const chiave = `question_${domanda.id}`
+    const rispostaUtente = parseInt(answers[chiave])
+    if (rispostaUtente == domanda.rispostaCorretta) {
+      punteggio += 1
+    }
+  })
+  return punteggio
+}
+
+module.exports = { loadQuestions, saveQuestions, correggiQuiz }
+
+

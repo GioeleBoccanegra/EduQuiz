@@ -42,5 +42,16 @@
       "Saturno"
     ],
     "rispostaCorretta": 2
+  },
+  {
+    "id": 5,
+    "domanda": "In che anno è stato firmato il primo trattato dell'Unione Europea?",
+    "opzioni": [
+      "1986",
+      "1992",
+      "2000",
+      "1975"
+    ],
+    "rispostaCorretta": 1
   }
 ]
